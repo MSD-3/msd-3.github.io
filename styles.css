@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(135deg, #181818, #abaaaa);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-left: 20%;
+}
+
+.content p {
+    font-size: 1.4rem;
+    margin-left: 20%;
+}
+
+img {
+    max-width: 300px;
+    border: 5px solid white;
+    border-radius: 50%;
+}

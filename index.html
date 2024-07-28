@@ -5,26 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row vh-100 align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Mriganko Shekhar Dutta</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-me">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex flex-column align-items-center">
+        <div class="row vh-100 align-items-center fade-out-section">
             <div class="col-md-6">
-                <div class="content">
+                <div class="content fade-in-section" id="intro">
                     <h1>Hey, I'm Mriganko Shekhar Dutta</h1>
                     <p>
-                        I'm a 1<sup>st</sup> year <a href="https://www.iitb.ac.in/newacadhome/msResearch.jsp" style="color: white;">MS by Research</a> student at <a href="https://www.iitb.ac.in/" style="color: white;">IIT Bombay</a> in the department of <a href="www.cse.iitb.ac.in" style="color: white;">Computer Science and Engineering.</a>
-                    
-                        I have been fascinated by Computer Systems maybe since kindergarden when I learned to put my hand over one of those mice with a ball instead of a laser sensor .
+                        I'm a 1<sup>st</sup> year <a href="https://www.iitb.ac.in/newacadhome/msResearch.jsp" style="color: white;">MS by Research</a> student at <a href="https://www.iitb.ac.in/" style="color: white;">IIT Bombay</a> in the department of <a href="https://www.cse.iitb.ac.in" style="color: white;">Computer Science and Engineering.</a>
+                        I have been fascinated by Computer Systems maybe since kindergarten when I learned to put my hand over one of those mice with a ball instead of a laser sensor.
                     </p>
-                
                 </div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="mypic.jpg" alt="Hold up , getting Mriganko here" class="img-fluid rounded-circle">
+            <div class="col-md-6 text-center fade-out-section">
+                <img src="mypic.jpg" alt="Hold up, getting Mriganko here" class="img-fluid rounded-circle profile-pic">
+                <div class="social-buttons mt-3 fade-in-section">
+                    <a href="https://www.linkedin.com/in/msd117/" target="_blank" class="btn btn-outline-light btn-lg mr-2">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/its_msd_3" target="_blank" class="btn btn-outline-light btn-lg mr-2">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:mriganko.msd@gmail.com" class="btn btn-outline-light btn-lg mr-2">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="myresume.pdf" target="_blank" class="btn btn-outline-light btn-lg">
+                        My Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row w-100 justify-content-center fade-out-section">
+            <div class="col-12 d-flex flex-column align-items-center">
+                <div class="card fade-in-section" id="about-me">
+                    <div class="card-body">
+                        <h2>About Me</h2>
+                        <p>
+                            I'm from Kolkata. Currently I'm pursuing my masters degree from IIT Bombay in the department of Computer Science and Engineering. I'm part of the <a href="https://casper-iitb.github.io/" style="color: white;">Computer Architecture for Security and Performance Research (CASPER)</a> group and working as a part-time research assistant.
+                            I'm working with my advisor <a href="https://www.cse.iitb.ac.in/~biswa/" style="color: white;">Prof. Biswa Panda</a> to research on the latest innovations in the field of Computer Architecture.
+                        </p>
+                    </div>
+                </div>
+                <div class="card mt-4 fade-in-section" id="education">
+                    <div class="card-body">
+                        <h2>Education</h2>
+                    </div>
+                </div>
+                <div class="card mt-4 fade-in-section" id="experience">
+                    <div class="card-body">
+                        <h2>Experience</h2>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card mt-4 fade-in-section" id="projects">
+                    <div class="card-body">
+                        <h2>Projects</h2>
+                        <p></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

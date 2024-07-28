@@ -2,6 +2,16 @@ body {
     background: linear-gradient(135deg, #181818, #abaaaa);
     color: white;
     font-family: Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+.navbar {
+    margin-bottom: 50px;
+    transition: top 0.3s;
+}
+
+.navbar-hidden {
+    top: -70px; /* Adjust based on navbar height */
 }
 
 .content h1 {
@@ -15,8 +25,69 @@ body {
     margin-left: 20%;
 }
 
-img {
-    max-width: 300px;
+.profile-pic {
+    max-width: 345px; /* Increased from 300px to 345px (15% larger) */
     border: 5px solid white;
     border-radius: 50%;
 }
+
+.card {
+    background: #282828;
+    color: white;
+    border: none;
+    margin: 20px;
+    padding: 20px;
+    width: 80%;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: left; /* Left align the card headings */
+    width: 100%; /* Ensure the heading takes the full width of the card */
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+.container-fluid {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fade-in-section {
+    opacity: 15%;
+    transform: translateY(20px);
+    transition: opacity 1.0s ease-out, transform 1.26s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out-section {
+    opacity: 1;
+    transition: opacity 1s ease-out, transform 1.26s ease-out;
+}
+
+.fade-out-section.is-hidden {
+    opacity: 15%;
+    transform: translateY(20px);
+}
+
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons .btn {
+    margin-right: 10px;
+}
+

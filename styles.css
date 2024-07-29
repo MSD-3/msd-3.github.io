@@ -5,6 +5,10 @@ body {
     overflow-y: scroll;
 }
 
+a, a:hover, a:active, a:visited {
+     color: white; 
+}
+
 .navbar {
     margin-bottom: 50px;
     transition: top 0.3s;
@@ -38,7 +42,7 @@ body {
     font-size: 1.4rem;
     margin: 20px;
     padding: 20px;
-    width: 80%;
+    width: 84%;
     border-radius: 45px;
     display: flex;
     flex-direction: column;
@@ -234,4 +238,13 @@ body {
         flex: 1 1 calc(100% - 20px); /* One card per row on small screens */
         max-width: calc(100% - 20px);
     }
+}
+#gifContainer {
+    display: none; /* Initially hidden */
+    /* margin-top: 20px; */
+}
+
+#gifImage {
+    max-width: 3%; /* Responsive */
+    height: auto;
 }

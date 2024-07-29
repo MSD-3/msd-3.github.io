@@ -38,3 +38,21 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = scrollTop;
     });
 });
+
+document.getElementById('toggleGifAudioLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default link behavior
+    
+    var gifContainer = document.getElementById('gifContainer');
+    var audioPlayer = document.getElementById('audioPlayer');
+    
+    if (gifContainer.style.display === 'none' || gifContainer.style.display === '') {
+        // Show the GIF container and play the audio
+        gifContainer.style.display = 'block';
+        audioPlayer.play();
+    } else {
+        // Hide the GIF container and pause the audio
+        gifContainer.style.display = 'none';
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0; // Reset audio to the beginning
+    }
+});

@@ -26,7 +26,7 @@ body {
 }
 
 .profile-pic {
-    max-width: 345px; /* Increased from 300px to 345px (15% larger) */
+    max-width: 345px; 
     border: 5px solid white;
     border-radius: 50%;
 }
@@ -42,14 +42,14 @@ body {
     border-radius: 45px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
+    align-items: flex-start; 
 }
 
 .card h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: left; /* Left align the card headings */
-    width: 100%; /* Ensure the heading takes the full width of the card */
+    text-align: left;
+    width: 100%; 
 }
 
 .card p {
@@ -164,4 +164,74 @@ body {
     color: white;
 }
 
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
+.project-card {
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-inner {
+    border: 2px solid white;
+    background: none;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between; /* Ensure the button is at the bottom */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-card-inner h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card-inner p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Ensure the description takes up available space */
+}
+
+.project-card-inner .btn {
+    border: 1px solid white;
+    color: white;
+    background: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects */
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card-inner .btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(100% - 20px); /* One card per row on small screens */
+        max-width: calc(100% - 20px);
+    }
+}

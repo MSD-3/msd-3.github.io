@@ -93,48 +93,67 @@
                 <div class="card mt-4 fade-in-section" id="education">
                     <div class="card-body">
                         <h2>Education</h2>
-                        <div class="card mt-4 fade-in-section" id="education">
-                                <div class="roadmap-container">
-                                    <div class="roadmap">
-                                        <div class="roadmap-item">
-                                            <div class="roadmap-content">
-                                                <h3>2024 - Present</h3>
-                                                <p>MS by Research in Computer Science and Engineering,<br> IIT Bombay</p>
-                                            </div>
-                                        </div>
-                                        <div class="roadmap-item">
-                                            <div class="roadmap-content">
-                                                <h3>2020 - 2024</h3>
-                                                <p>Bachelor of Technology in Computer Science and Engineering,Techno India University</p>
-                                            </div>
-                                        </div>
-                                        <div class="roadmap-item">
-                                            <div class="roadmap-content">
-                                                <h3>2018 - 2020</h3>
-                                                <p>Higher Secondary,CBSE, South Point High School </p>
-                                            </div>
-                                        </div>
-                                        <div class="roadmap-item">
-                                            <div class="roadmap-content">
-                                            <h3>2014 - 2018</h3>
-                                            <p>Secondary School,CBSE, South Point High School</p>
-                                        </div>
+                        <div class="timeline">
+                            <div class="vertical-line"></div>
+                            
+                            <div class="entry">
+                                <div class="left-content">
+                                    <div class="year">2024 - Present</div>
+                                    <div class="details">
+                                        MS by Research in Computer Science and Engineering,<br>
+                                        IIT Bombay
+                                    </div>
+                                </div>
+                                <div class="dot"></div>
+                                <div class="right-content"></div>
+                            </div>
+                
+                            <div class="entry">
+                                <div class="left-content"></div>
+                                <div class="dot"></div>
+                                <div class="right-content">
+                                    <div class="year">2020 - 2024</div>
+                                    <div class="details">
+                                        Bachelor of Technology in Computer Science and Engineering,<br>
+                                        Techno India University
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="entry">
+                                <div class="left-content">
+                                    <div class="year">2018 - 2020</div>
+                                    <div class="details">
+                                        Higher Secondary, CBSE,<br>
+                                        South Point High School
+                                    </div>
+                                </div>
+                                <div class="dot"></div>
+                                <div class="right-content"></div>
+                            </div>
+                
+                            <div class="entry">
+                                <div class="left-content"></div>
+                                <div class="dot"></div>
+                                <div class="right-content">
+                                    <div class="year">2014 - 2018</div>
+                                    <div class="details">
+                                        Secondary School, CBSE,<br>
+                                        South Point High School
                                     </div>
                                 </div>
                             </div>
                         </div>
-                                                    
-                        </div>
-                        
                     </div>
                 </div>
+                
                 <div class="card mt-4 fade-in-section" id="experience">
                     <div class="card-body">
                         <h2>Experience</h2>
                         <div class="card-body"><p>
-                                <li>Research Assistant, CASPER group, Trust Labs, IIT Bombay  (August 2024 - Present)
+                                <li>Research Assistant, <a href="https://casper-iitb.github.io/">CASPER group</a>, <a href="https://trustlab.iitb.ac.in/">Trust Labs</a>, <a href="https://www.iitb.ac.in/">IIT Bombay</a>  (August 2024 - Present)
                                 </li>
-                                <li>Subject Matter Expert, Chegg India (May 2022 - October 2022)
+                                <li>Subject Matter Expert, <a href="https://www.cheggindia.com/">Chegg India</a> (May 2022 - October 2022)
                                 </li>
                             </p>
                         </div>
@@ -149,6 +168,8 @@
                                 <div class="card project-card-inner">
                                     <div class="card-body">
                                         <h3>Microarchitecture Conscious Matrix Multiplication</h3>
+                                        <i class="fab fa-cuttlefish"></i><span style="font-size: 18px;">++</span>
+                                        
                                         <p>A project focused on opttmizing matrix multplication code for better performance by leveraging the 
                                             microarchitectural components like caches, and prefetchers in our CPU without asymptotically changing the 
                                             algorithm. In our experiment, we obtained a geomean speedup of 91.5% over baseline code.</p>
@@ -160,6 +181,7 @@
                                 <div class="card project-card-inner">
                                     <div class="card-body">
                                         <h3>Implementaion of different prefetchers in ChampSim CPU Simulator</h3>
+                                        <i class="fab fa-cuttlefish"></i><span style="font-size: 18px;">++</span> &ensp; <i class="fas fa-terminal"></i>
                                         <p>In this project, we implemented different stride prefetchers for TLB as well as the data cache of our CPU in the 
                                             ChampSim simulator. For TLB we implemented the Arbitrary Stride Prefetcher while for data cache we implemented 
                                             IP Stride and Complex Stride Prefetchers.</p>
@@ -171,9 +193,10 @@
                                 <div class="card project-card-inner">
                                     <div class="card-body">
                                         <h3>Distributed Key-Value Store</h3>
+                                        <i class="fab fa-cuttlefish"></i><span style="font-size: 18px;">++</span> &ensp; <i class="fas fa-terminal"></i>
                                         <p> A consistent and scalable distributed key-value store server. Each node comprises a thread pool that handles the 
                                             requests parallelly. A caching mechanism is also implemented to opƟmise performance ensuring data coherence. A 
-                                            user can connect to any of the nodes using an IP address and port number and perform CRUD operaƟons. </p>
+                                            user can connect to any of the nodes using an IP address and port number and perform CRUD operations. </p>
                                         <a href="https://github.com/MSD-3/Distributed-KV-Store" class="btn btn-outline-light">Read more</a>
                                     </div>
                                 </div>
@@ -182,6 +205,7 @@
                                 <div class="card project-card-inner">
                                     <div class="card-body">
                                         <h3>Sentiment Analysis of Product Reviews</h3>
+                                        <i class="fab fa-python"> &ensp; </i><i class="fab fa-html5"></i> &ensp; <i class="fab fa-css3-alt"></i>
                                         <p>An end-to-end project that accepts an Amazon product link and generates a score based on the product reviews.</p>
                                         <a href="https://github.com/MSD-3/Sentiment-Analysis-of-Product-Reviews" class="btn btn-outline-light">Read more</a>
                                     </div>
@@ -191,6 +215,7 @@
                                 <div class="card project-card-inner">
                                     <div class="card-body">
                                         <h3>Legal Lens</h3>
+                                        <i class="fab fa-python"></i> 
                                         <p>An AI-powered solution that can simplify legal documentation for individuals and small businesses in India, by automatically drafting legal documents in plain language and using easy-to-understand terms.</p>
                                         <a href="https://github.com/Legal-Lens/Legal-Lens" class="btn btn-outline-light">Read more</a>
                                     </div>

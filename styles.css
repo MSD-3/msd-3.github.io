@@ -64,6 +64,27 @@ a, a:hover, a:active, a:visited {
     flex-direction: column;
 }
 
+#education {
+    background: #282828;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    margin: 20px;
+    padding: 20px;
+    width: 84%;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; Aligns content to the left */
+}
+
+#education h2 {
+    text-align: left; /* Left align the h2 text */
+    margin: 0; /* Remove default margin if any */
+    width: 100%; /* Ensure full width for proper alignment */
+}
+
+
 .card h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -113,7 +134,9 @@ a, a:hover, a:active, a:visited {
 
  .timeline {
     margin: 5em auto;
-    max-width:  34.15em;
+    max-width:  20em;
+     flex-direction: column;
+    align-items: center;
 }
 
 .checkpoint {
@@ -141,12 +164,12 @@ a, a:hover, a:active, a:visited {
     text-align: right;
     border-right: 3px solid #888;
     padding-right: 3em;
-    transform: translateX(-9.935em);
+    transform: translateX(-9.97em);
 }
 .checkpoint:nth-child(even) {
     border-left: 3px solid #888;
     padding-left: 3em;
-    transform: translateX(9.935em);
+    transform: translateX(9.97em);
 }
 
 .checkpoint:nth-child(odd)::before, .checkpoint:nth-child(even)::before{
@@ -188,12 +211,18 @@ a, a:hover, a:active, a:visited {
 }
 
 @media screen and (max-width: 1150px) {
+    body {
+        transform: scale(0.41);  /* Zoom out */
+        transform-origin: 0 0;  /* Set the zoom origin to the top-left corner */
+    }
+
     .timeline{
         width: 80vw;
     }
 
     .timeline .checkpoint{
         width: 100%;
+        text-align: center;
         transform: none;
         padding-left: 0;
         padding-right: 0;

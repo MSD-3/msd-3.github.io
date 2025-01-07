@@ -164,12 +164,12 @@ a, a:hover, a:active, a:visited {
     text-align: right;
     border-right: 3px solid #888;
     padding-right: 3em;
-    transform: translateX(-9.97em);
+    transform: translateX(-9.938em);
 }
 .checkpoint:nth-child(even) {
     border-left: 3px solid #888;
     padding-left: 3em;
-    transform: translateX(9.97em);
+    transform: translateX(9.938em);
 }
 
 .checkpoint:nth-child(odd)::before, .checkpoint:nth-child(even)::before{
@@ -212,7 +212,7 @@ a, a:hover, a:active, a:visited {
 
 @media screen and (max-width: 1150px) {
     body {
-        transform: scale(0.41);  /* Zoom out */
+        transform: scale(1.0);  /* Zoom out */
         transform-origin: 0 0;  /* Set the zoom origin to the top-left corner */
     }
 

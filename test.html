@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Timeline</title>
+  <style>
+    body {
+      
+      margin: 0;
+      background-color: #222;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2em;
+    }
+    .body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: fixed;
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+     .timeline {
+        margin: 5em auto;
+        max-width:  34.15em;
+    }
+
+    .checkpoint {
+        max-width: 20em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        position: relative;
+    }
+
+    .checkpoint div{
+        border: 0px solid #888;
+        border-radius: 1em;
+        padding: 1.5em;
+    }
+
+    .checkpoint p{
+        line-height: 27px;
+        max-width: 18em;
+    }
+    .checkpoint h3 {
+        padding-bottom: 5px;
+    }
+
+    .checkpoint:nth-child(odd) {
+        text-align: right;
+        border-right: 3px solid #888;
+        padding-right: 3em;
+        transform: translateX(-11.5em);
+    }
+    .checkpoint:nth-child(even) {
+        border-left: 3px solid #888;
+        padding-left: 3em;
+        transform: translateX(11.5em);
+    }
+    
+    .checkpoint:nth-child(odd)::before, .checkpoint:nth-child(even)::before{
+        content: '';
+        background: #888;
+        width: 0em;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .checkpoint:nth-child(odd)::before {
+        right: 0em;
+    }
+
+    .checkpoint:nth-child(even)::before {
+        left: 0em;
+    }
+
+    .checkpoint:nth-child(odd) div::before, .checkpoint:nth-child(even) div::before{
+        content: '';
+        background: #fff;
+        box-shadow: 0 0 0.5em #3a3a3a;
+        width: 0.8em;
+        height: 0.8em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+    }
+
+    .checkpoint:nth-child(even) div::before{
+        left: -0.5em;
+    }
+
+    .checkpoint:nth-child(odd) div::before{
+        right: -0.5em;
+    }
+
+    @media screen and (max-width: 1150px) {
+        .timeline{
+            width: 80vw;
+        }
+
+        .timeline .checkpoint{
+            width: 100%;
+            transform: none;
+            padding-left: 0;
+            padding-right: 0;
+            border: none;
+        }
+        .checkpoint div {
+            border: 3px solid #888;
+        }
+
+        .timeline .checkpoint::before {
+            width: 3px;
+            height: 4em;
+            top: -2em;
+            left: 50%;
+            transform:  translateX(-50%);
+        }
+
+        .timeline .checkpoint div::before {
+            top: -0.5em;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+
+    /* .timeline {
+      position: relative;
+      padding: 20px;
+      max-width: 90%;
+      box-sizing: border-box;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: white;
+      transform: translateX(-50%);
+    }
+
+    .event {
+      position: relative;
+      margin: 20px 0;
+      padding: 10px;
+      width: 45%;
+    }
+
+    .event.left {
+      text-align: right;
+      left: 0;
+    }
+
+    .event.right {
+      text-align: left;
+      left: 50%;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+
+    .event h3 {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .event p {
+      margin: 5px 0 0;
+    }
+
+    @media (max-width: 600px) {
+      .timeline {
+        padding: 10px;
+      }
+      .event {
+        font-size: 0.9em;
+        width: 100%;
+        text-align: center;
+      }
+      .event.left, .event.right {
+        left: 0;
+      }
+    } */
+  </style>
+</head>
+<body>
+  <div class="timeline">
+    <div class="checkpoint">
+        <div><h3>2024 - Present</h3>
+            <p>MS by Research in Computer Science and Engineering, IIT Bombay</p>
+        </div>
+      
+    </div>
+
+    <div class="checkpoint">
+        <div>
+            <h3>2020 - 2024</h3>
+            <p>Bachelor of Technology in Computer Science and Engineering, Techno India University</p>
+        </div>
+    </div>
+
+    <div class="checkpoint">
+        <div><h3>2018 - 2020</h3>
+            <p>Higher Secondary, CBSE, South Point High School</p>
+        </div>
+      
+    </div>
+
+    <div class="checkpoint">
+        <div><h3>2014 - 2018</h3>
+            <p>Secondary School, CBSE, South Point High School</p>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

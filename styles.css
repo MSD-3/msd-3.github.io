@@ -62,7 +62,7 @@ a, a:hover, a:active, a:visited {
     border-radius: 45px;
     display: flex;
     flex-direction: column;
-    
+}
 
 .card h2 {
     font-size: 2rem;

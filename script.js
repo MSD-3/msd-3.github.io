@@ -1,4 +1,43 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const hamburger = document.querySelector('.hamburger-menu');
+    const sidebar = document.querySelector('.sidebar');
+    const closeBtn = document.querySelector('.close-btn');
+    const overlay = document.querySelector('.sidebar-overlay');
+    const navItems = document.querySelectorAll('.nav-item a');
+    
+    // Toggle sidebar on hamburger click
+    hamburger.addEventListener('click', function() {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    });
+    
+    // Close sidebar when X is clicked
+    closeBtn.addEventListener('click', function() {
+        closeSidebar();
+    });
+    
+    // Close sidebar when overlay is clicked
+    overlay.addEventListener('click', function() {
+        closeSidebar();
+    });
+    
+    // Close sidebar when a menu item is clicked (on mobile)
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                closeSidebar();
+            }
+        });
+    });
+    
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    }
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -45,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Improved highlight active section logic
     const sections = document.querySelectorAll('.section');
-    const navItems = document.querySelectorAll('.nav-item');
+    const navItemLinks = document.querySelectorAll('.nav-item');
     
     // Initially highlight the About section when at the top of the page
     highlightAboutSection();
@@ -64,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function highlightAboutSection() {
         // Clear any active classes
-        navItems.forEach(item => {
+        navItemLinks.forEach(item => {
             item.classList.remove('active');
         });
         
@@ -95,13 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-
         if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 50) {
             current = sections[sections.length - 1].getAttribute('id');
         }
         
         // Remove active class from all nav items
-        navItems.forEach(item => {
+        navItemLinks.forEach(item => {
             item.classList.remove('active');
         });
         
@@ -113,4 +151,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+    
+    // Check window resize to handle sidebar visibility
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            // Reset sidebar and overlay on desktop
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
 });

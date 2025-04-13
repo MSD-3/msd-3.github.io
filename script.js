@@ -1,58 +1,116 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const fadeInSections = document.querySelectorAll('.fade-in-section');
-    const fadeOutSections = document.querySelectorAll('.fade-out-section');
-    const navbar = document.querySelector('.navbar');
-    let lastScrollTop = 0;
-
-    const options = {
-        threshold: [0.1, 0.9] // Adjust threshold for earlier fade-out
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.intersectionRatio > 0.1) {
-                entry.target.classList.add('is-visible');
-            } else {
-                entry.target.classList.remove('is-visible');
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
+    // Dark mode toggle functionality
+    const themeButton = document.getElementById('theme-button');
+    const htmlElement = document.documentElement;
+    
+    // Check for saved theme preference or use preferred color scheme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
+        updateButtonText(savedTheme);
+    } else {
+        // Check if user prefers dark mode
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        if (prefersDarkScheme.matches) {
+            htmlElement.setAttribute('data-theme', 'dark');
+            updateButtonText('dark');
+        }
+    }
+    
+    themeButton.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        updateButtonText(newTheme);
+    });
+    
+    function updateButtonText(theme) {
+        const buttonText = document.querySelector('#theme-button span');
+        buttonText.textContent = theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE';
+    }
+    
+    // Improved highlight active section logic
+    const sections = document.querySelectorAll('.section');
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    // Initially highlight the About section when at the top of the page
+    highlightAboutSection();
+    
+    // Check active section on scroll with throttling
+    let isScrolling = false;
+    window.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            isScrolling = true;
+            setTimeout(function() {
+                highlightActiveSection();
+                isScrolling = false;
+            }, 100);
+        }
+    });
+    
+    function highlightAboutSection() {
+        // Clear any active classes
+        navItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Highlight the About section at the top of the page
+        const aboutNavItem = document.querySelector('.nav-item a[href="#about"]');
+        if (aboutNavItem) {
+            aboutNavItem.parentElement.classList.add('active');
+        }
+    }
+    
+    function highlightActiveSection() {
+        const scrollY = window.pageYOffset;
+        if (scrollY < 50) {
+            highlightAboutSection();
+            return;
+        }
+        
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionId = section.getAttribute('id');
+            const offset = sectionId === 'about' ? 200 : 150;
+            const sectionTop = section.offsetTop - offset;
+            const sectionHeight = section.offsetHeight;
+            
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                current = sectionId;
             }
         });
-    }, options);
+        
 
-    fadeInSections.forEach(section => {
-        observer.observe(section);
-    });
-
-    fadeOutSections.forEach(section => {
-        observer.observe(section);
-    });
-
-    window.addEventListener('scroll', () => {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Downscroll
-            navbar.classList.add('navbar-hidden');
-        } else {
-            // Upscroll
-            navbar.classList.remove('navbar-hidden');
+        if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 50) {
+            current = sections[sections.length - 1].getAttribute('id');
         }
-        lastScrollTop = scrollTop;
-    });
-});
-
-document.getElementById('toggleGifAudioLink').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    
-    var gifContainer = document.getElementById('gifContainer');
-    var audioPlayer = document.getElementById('audioPlayer');
-    
-    if (gifContainer.style.display === 'none' || gifContainer.style.display === '') {
-        // Show the GIF container and play the audio
-        gifContainer.style.display = 'block';
-        audioPlayer.play();
-    } else {
-        // Hide the GIF container and pause the audio
-        gifContainer.style.display = 'none';
-        audioPlayer.pause();
-        audioPlayer.currentTime = 0; // Reset audio to the beginning
+        
+        // Remove active class from all nav items
+        navItems.forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Add active class to current nav item
+        if (current) {
+            const activeNavItem = document.querySelector(`.nav-item a[href="#${current}"]`);
+            if (activeNavItem) {
+                activeNavItem.parentElement.classList.add('active');
+            }
+        }
     }
 });

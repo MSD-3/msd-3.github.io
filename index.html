@@ -1,210 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1.0">
-    <title>MSD</title>
-    <link rel="icon" type="image/x-icon" href="./imgs/M.ico">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRIGANKO SHEKHAR DUTTA - IIT Bombay CSE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Mriganko Shekhar Dutta</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about-me">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
+    <div class="sidebar">
+        <div class="profile-image">
+            <img src="imgs/profile-picture.jpg" alt="Profile photo">
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/msd117/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://github.com/MSD-3/" target="_blank" class="social-icon" aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/its_msd_3" target="_blank" class="social-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="mailto:mriganko.msd@iitb.ac.in" class="social-icon" aria-label="Email">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+
+        
+        <div class="nav">
+            <div class="nav-item"><a href="#about">ABOUT</a></div>
+            <div class="nav-item"><a href="#research">RESEARCH INTERESTS</a></div>
+            <div class="nav-item"><a href="#projects">PROJECTS</a></div>
+            <div class="nav-item"><a href="#academics">ACADEMICS</a></div>
+            <div class="nav-item"><a href="documents/resume.pdf">CV</a></div>
+        </div>
+        <a href="https://iitb.ac.in" style="color: inherit;"><img class="logo" src="imgs/IITB-Logo-white.png" alt="IIT Bombay logo"></a>
+        <div class="theme-toggle">
+            <button id="theme-button" aria-label="Toggle dark mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                <span>DARK MODE</span>
+            </button>
+        </div>
+        
+        
+    </div>
+    
+    <div class="content">
+        <h1 class="name"><span>M</span>RIGANKO <span>S</span>HEKHAR <span>D</span>UTTA</h1>
+        
+        <div class="details">
+            <a href="https://acad.iitb.ac.in/admissions/masters/msbyresearch" style="color: inherit;" >Master of Science by Research</a> , 
+            <a href="https://www.cse.iitb.ac.in/" style="color: inherit;">Computer Science and Engineering</a>, 
+            <a href="https://www.iitb.ac.in/" style="color: inherit;">IIT Bombay</a><br>
+            Research Group: <a href="https://casper-iitb.github.io/" style="color: inherit;">CASPER</a> and <a href="https://trustlab.iitb.ac.in/" style="color: inherit;">Trust Lab</a>
+            <!-- <br>
+            <br>
+            <a href="mriganko@cse.iitb.ac.in" class="email">mriganko [at] cse [dot] iitb [dot] ac [dot] in</a> -->
+        </div>
+        
+        <div id="about" class="section">
+            <h2>ABOUT</h2>
+            <p>
+                I'm a first year postgraduate at the Department of Computer Science and Engineering, IIT Bombay. 
+                I'm pursuing my MS by Research under the guidance of <a href="https://www.cse.iitb.ac.in/~biswa" style="color: inherit;">Prof. Biswabandan Panda</a>. 
+                My research interest lies in the field of computer architecture, focusing on microarchitectural performance and security. 
+                I'm currently working on improving the performance of data center CPUs by optimizing their microarchitectural design.
+
+            </p>
+            <p style="margin-top: 15px;">
+               Outside of academics, I enjoy physical activities like running, swimming, gymming and everything in between. 
+               I also find pleasure in capturing the unnoticed yet always present thorugh my <a href="https://www.instagram.com/mriganko_photography/" style="color: inherit;">lens</a>.
+            </p>
+        </div>
+        
+        <div id="research" class="section">
+            <h2>RESEARCH INTERESTS</h2>
+            <p>
+                My research focuses on computer architecture, particularly on:
+            </p>
+            <ul>
+                <li>Frontend of the CPU pipeline</li>
+                <li>Prefetchers</li>
+                <li>Cache Management Techniques</li>
+                
             </ul>
         </div>
-    </nav>
-
-    <div class="container-fluid d-flex flex-column align-items-center">
-        <div class="row vh-100 align-items-center fade-out-section">
-            <div class="col-md-6">
-                <div class="content fade-in-section" id="intro">
-                    <h1>Hey, I'm Mriganko Shekhar Dutta</h1>
-                    <p>
-                        I'm a 1<sup>st</sup> year <a href="https://www.iitb.ac.in/newacadhome/msResearch.jsp">MS by Research</a> student at <a href="https://www.iitb.ac.in/">IIT Bombay</a> in the department of <a href="https://www.cse.iitb.ac.in">Computer Science and Engineering.</a>
-                        I have been fascinated by Computer Systems maybe since kindergarten when I learned to put my hands on one of those mice with a ball instead of a laser sensor.
-                    </p>
-                </div>
+        
+        <div id="projects" class="section">
+            <h2>PROJECTS</h2>
+            
+            <div class="project-card">
+                <h3><a href="https://github.com/MSD-3/Distributed-KV-Store" style="color: inherit;">Distributed Key-Value Store</a></h3>
+                <p>
+                    A consistent and scalable distributed key-value store server. Each node comprises a thread pool that handles the requests parallelly. A caching mechanism is also implemented to opƟmise performance ensuring data coherence. A user can connect to any of the nodes using an IP address and port number and perform CRUD operations.
+                </p>
             </div>
-            <div class="col-md-6 text-center fade-out-section">
-                <img src="./imgs/mypic.jpg" alt="Hold up, getting Mriganko here" class="img-fluid rounded-circle profile-pic">
-                <div class="social-buttons mt-3 fade-in-section">
-                    <a href="https://www.linkedin.com/in/msd117/" target="_blank" class="btn btn-outline-light btn-lg mr-2">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/MSD-3/" target="_blank" class="btn btn-outline-light btn-lg mr-2">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/its_msd_3" target="_blank" class="btn btn-outline-light btn-lg mr-2">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="mailto:mriganko.msd@iitb.ac.in" class="btn btn-outline-light btn-lg mr-2">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="./documents/resume.pdf" target="_blank" class="btn btn-outline-light btn-lg">
-                        My Resume
-                    </a>
-                </div>
+            
+            <div class="project-card">
+                <h3><a href="https://github.com/MSD-3/Prefetcher-implementation-in-ChampSim" style="color: inherit;">Implementation of prefetchers in ChampSim</a></h3>
+                <p>
+                    In this project, we implemented different stride prefetchers for TLB as well as the data cache of our CPU in the ChampSim simulator. For TLB we implemented the Arbitrary Stride prefetcher while for data cache we implemented IP Stride and Complex Stride prefetchers.
+                </p>
+            </div>
+            
+            <div class="project-card">
+                <h3><a href="https://github.com/MSD-3/Sentiment-Analysis-of-Product-Reviews.git" style="color: inherit;">Sentiment Analysis of Product Reviews</a></h3>
+                <p>
+                    An end-to-end project that accepts an Amazon product link and generates a score based on the product reviews.
+                </p>
             </div>
         </div>
-        <div class="row w-100 justify-content-center fade-out-section">
-            <div class="col-12 d-flex flex-column align-items-center">
-                <div class="card fade-in-section" id="about-me">
-                    <div class="card-body">
-                        <h2>About Me</h2><br>
-                        <p style="font-size: 1.4rem;">
-                            I'm from Kolkata, currently living in Powai,Mumbai. I did my schooling from <a href="https://www.southpoint.ac.in/">South Point High School,Kolkata</a> and my Bachelor in Technology from <a href="https://www.technoindiauniversity.ac.in/">Techno India University, Kolkata</a>. I'm pursuing my masters degree from IIT Bombay in the department of Computer Science and Engineering. I'm part of the <a href="https://casper-iitb.github.io/">Computer Architecture for Security and Performance Research (CASPER)</a> group and working as a part-time research assistant.
-                            I'm working with my advisor <a href="https://www.cse.iitb.ac.in/~biswa/">Prof. Biswa Panda</a> to research on the latest innovations in the field of Computer Architecture.
-                        </p>
-                        <br>
-                        <p style="font-size: 1.4rem;">
-                            My hobbies are,
-                            <li>Photography <a href="https://www.instagram.com/mriganko_photography"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li>Cooking</li>
-                            <li>Driving/Riding</li>
-                            <li><del><a id="toggleGifAudioLink">Gaming</a></del><a style="font-size: 0.9rem;">(Depricated)</a> 
-                                <div id="gifContainer">
-                                    <img id="gifImage" src="./easteregg/mc.gif" alt="GIF Image">
-                                </div>
-                                <audio id="audioPlayer" src="./easteregg/eastermusic.webm"></audio>
-                            </li>
-                        </p>
-                    </div>
-                </div>
-                <div class="card mt-4 fade-in-section" id="education">
-                    <div class="card-body">
-                        <h2>Education</h2>
-                        <div class="timeline">
-                            <div class="checkpoint">
-                                <div><h3>2024 - Present</h3>
-                                    <p>MS by Research in Computer Science and Engineering, IIT Bombay</p>
-                                </div>
-                              
-                            </div>
-                        
-                            <div class="checkpoint">
-                                <div>
-                                    <h3>2020 - 2024</h3>
-                                    <p>Bachelor of Technology in Computer Science and Engineering, Techno India University</p>
-                                </div>
-                            </div>
-                        
-                            <div class="checkpoint">
-                                <div><h3>2018 - 2020</h3>
-                                    <p>Higher Secondary, CBSE, South Point High School</p>
-                                </div>
-                              
-                            </div>
-                        
-                            <div class="checkpoint">
-                                <div><h3>2014 - 2018</h3>
-                                    <p>Secondary School, CBSE, South Point High School</p>
-                                </div>
-                            </div>
-                          </div>
-                    </div>
-                </div>
-                
-                <div class="card mt-4 fade-in-section" id="experience">
-                    <div class="card-body">
-                        <h2>Experience</h2>
-                        <div class="card-body"><p>
-                                <li>Research Assistant, <a href="https://casper-iitb.github.io/">CASPER group</a>, <a href="https://trustlab.iitb.ac.in/">Trust Labs</a>, <a href="https://www.iitb.ac.in/">IIT Bombay</a>  (August 2024 - Present)
-                                </li>
-                                <li>Subject Matter Expert, <a href="https://www.cheggindia.com/">Chegg India</a>  (May 2022 - October 2022)
-                                </li>
-                            </p>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="card mt-4 fade-in-section" id="projects">
-                    <div class="card-body">
-                        <h2>Projects</h2>
-                        <div class="projects-grid">
-                            <div class="project-card">
-                                <div class="card project-card-inner">
-                                    <div class="card-body">
-                                        <h3>Microarchitecture Conscious Matrix Multiplication</h3>
-                                        <i class="fab fa-cuttlefish"></i><span style="font-size: 18px;">++</span>
-                                        
-                                        <p>A project focused on opttmizing matrix multplication code for better performance by leveraging the 
-                                            microarchitectural components like caches, and prefetchers in our CPU without asymptotically changing the 
-                                            algorithm. In our experiment, we obtained a geomean speedup of 91.5% over baseline code.</p>
-                                        <a href="https://github.com/MSD-3/Microarchitecture-conscious-Matrix-Multiplication" class="btn btn-outline-light">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="card project-card-inner">
-                                    <div class="card-body">
-                                        <h3>Implementaion of different prefetchers in ChampSim CPU Simulator</h3>
-                                        <i class="fab fa-cuttlefish"></i><span style="font-size: 18px;">++</span> &ensp; <i class="fas fa-terminal"></i>
-                                        <p>In this project, we implemented different stride prefetchers for TLB as well as the data cache of our CPU in the 
-                                            ChampSim simulator. For TLB we implemented the Arbitrary Stride Prefetcher while for data cache we implemented 
-                                            IP Stride and Complex Stride Prefetchers.</p>
-                                        <a href="https://github.com/MSD-3/Prefetcher-implementation-in-ChampSim" class="btn btn-outline-light">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="card project-card-inner">
-                                    <div class="card-body">
-                                        <h3>Distributed Key-Value Store</h3>
-                                        <i class="fab fa-cuttlefish"></i><span style="font-size: 18px;">++</span> &ensp; <i class="fas fa-terminal"></i>
-                                        <p> A consistent and scalable distributed key-value store server. Each node comprises a thread pool that handles the 
-                                            requests parallelly. A caching mechanism is also implemented to opƟmise performance ensuring data coherence. A 
-                                            user can connect to any of the nodes using an IP address and port number and perform CRUD operations. </p>
-                                        <a href="https://github.com/MSD-3/Distributed-KV-Store" class="btn btn-outline-light">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="card project-card-inner">
-                                    <div class="card-body">
-                                        <h3>Sentiment Analysis of Product Reviews</h3>
-                                        <i class="fab fa-python"> &ensp; </i><i class="fab fa-html5"></i> &ensp; <i class="fab fa-css3-alt"></i>
-                                        <p>An end-to-end project that accepts an Amazon product link and generates a score based on the product reviews.</p>
-                                        <a href="https://github.com/MSD-3/Sentiment-Analysis-of-Product-Reviews" class="btn btn-outline-light">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-card">
-                                <div class="card project-card-inner">
-                                    <div class="card-body">
-                                        <h3>Legal Lens</h3>
-                                        <i class="fab fa-python"></i> 
-                                        <p>An AI-powered solution that can simplify legal documentation for individuals and small businesses in India, by automatically drafting legal documents in plain language and using easy-to-understand terms.</p>
-                                        <a href="https://github.com/Legal-Lens/Legal-Lens" class="btn btn-outline-light">Read more</a>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+        
+        <div id="academics" class="section">
+            <h2>ACADEMICS</h2>
+            <h3 style="margin-top: 30px;">Education Journey</h3>
+            <ul>
+                <li>MS by Research in Computer Science and Engineering, Indian Institute of Technology Bombay, Mumbai (2024 - present)</li>
+                <li>B. Tech in Computer Science and Engineering, Techno India University, Kolkata (2020 - 2024)</li>
+                <li>AISSCE, South Point High School, Kolkata (2018 - 2020)</li>
+            </ul>
+            <p>
+            
+            <h3 style="margin-top: 30px;">Courses Taken</h3>
+            <ul>
+                <li>CS683: Advanced Computer Architecture</li>
+                <li>CS744: Design and Engineering of Computing Systems</li>
+                <li>CS684: Embedded Systems</li>
+                <li>CS773: Computer Architecture for Performance and Security</li>
+            </ul>
+        
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

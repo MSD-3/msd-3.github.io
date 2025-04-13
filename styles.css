@@ -397,4 +397,15 @@ a {
         width: 120px;
         height: 120px;
     }
+    .logo{
+        margin-top: auto;
+        margin-bottom: 50px;
+        width: 120px;
+    }
+    .theme-toggle {
+        margin-top: auto;
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+    }
 }

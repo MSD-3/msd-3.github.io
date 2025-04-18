@@ -318,6 +318,11 @@ body {
     padding-bottom: 10px;
 }
 
+.section a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
 ul {
     margin-left: 25px;
     line-height: 1.8;

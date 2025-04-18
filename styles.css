@@ -28,7 +28,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.75s, color 0.75s, border-color 0.75s;
 }
 
 body {
@@ -96,7 +96,7 @@ body {
     position: fixed;
     height: 100vh;
     z-index: 1000;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.75s;
 }
 
 .profile-image {
@@ -190,7 +190,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     color: white;
     text-decoration: none;
 }
@@ -245,7 +245,7 @@ body {
     border-radius: 4px;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.75s;
 }
 
 #theme-button:hover {
@@ -277,7 +277,7 @@ body {
     flex: 1;
     padding: 60px 40px;
     margin-left: 280px;
-    transition: margin-left 0.3s ease;
+    transition: margin-left 0.75s ease;
 }
 
 .name {

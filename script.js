@@ -38,14 +38,41 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.overflow = ''; // Re-enable scrolling
     }
     
-    // Smooth scrolling for anchor links
+    // Smooth scrolling for anchor links with acceleration and deceleration
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop;
+                const startPosition = window.pageYOffset;
+                const distance = targetPosition - startPosition;
+                const duration = 800; // Duration of the animation in milliseconds
+                let startTime = null;
+
+                function animation(currentTime) {
+                    if (!startTime) startTime = currentTime;
+                    const timeElapsed = currentTime - startTime;
+
+                    // Ease-in-out function for acceleration and deceleration
+                    const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+                    const run = ease(timeElapsed / duration) * distance + startPosition;
+                    window.scrollTo(0, run);
+
+                    if (timeElapsed < duration) {
+                        requestAnimationFrame(animation);
+                    } else {
+                        // Ensure the final position is exactly the target position
+                        window.scrollTo(0, targetPosition);
+                    }
+                }
+
+                requestAnimationFrame(animation);
+            }
         });
     });
     
